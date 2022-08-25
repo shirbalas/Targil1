@@ -4,6 +4,23 @@ html, body {
     font: 13px Arial, sans-serif;
     margin: 0;
 }
+section.results_section {
+    position: relative;
+}
+
+section.results_section .results_section_left {
+    margin-left: 145px;
+}
+
+section.results_section .results_section_related_info {
+    width: 450px;
+    border: solid 1px rgb(235, 235, 235);
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    top: 7%;
+
+}
 
 main * {max-height: 1000000px;}  /* Override 'Font Boosting' in Chrome mobile */
 
@@ -24,6 +41,7 @@ ul {margin: 0; padding: 0;}
 header {
     background: #fafafa;
     border-bottom: 1px solid #e4e4e4;
+    /* background-color: rgba(53, 54, 58, 1); */
 }
 
 header div {
@@ -202,8 +220,6 @@ main {
     width: 632px;
 }
 
-main a:link {color:#1a0dab;}
-
 main a:hover {text-decoration: underline;}
 
 #stats {
@@ -293,13 +309,21 @@ main > ul {margin-bottom: 50px;}
 .title {
     font-size: 18px;
     font-weight: normal;
-    margin: 10px 0 2px;
+    margin: 17px 0 2px;
+    color: #0300ee;
 }
 
 .link {
     color: #006621;
     display: inline-block;
     font-size: 14px;
+}
+.links {
+	border-top: 1px solid lightgray;
+	display: flex;
+}
+.link-2 {
+	padding-right: 18.7px;
 }
 
 .down-arrow {
@@ -329,7 +353,10 @@ main > ul {margin-bottom: 50px;}
     padding: 5px 0;
 }
 
-#related a {font-size: 14px;}
+#related a {
+    font-size: 14px;
+    color: #0300ee;
+}
 
 table {
     color: rgba(0, 0, 0, 0.87);
@@ -347,28 +374,191 @@ td:last-child {
 }
 
 
+ul.people_also_ask_list {
+    list-style-type: none;
+    padding-left: 0px;
+    width: 630px;
+    margin-top: 25px;
+}
 
+ul.people_also_ask_list li.also_ask_question_entry {
+    padding: 12px 40px 12px 16px;
+    font-size: 16px;
+    font-family: arial,sans-serif;
+    color: #222222;
+    border: solid 1px rgb(235, 235, 235);
+    border-bottom: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul.people_also_ask_list li.also_ask_question_entry div {
+    display: inline-block;
+}
+
+ul.people_also_ask_list li.also_ask_question_entry:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: initial;
+    font-size: 18px;
+}
+
+ul.people_also_ask_list li.also_ask_question_entry:last-child {
+    border-bottom: solid 1px rgb(235, 235, 235);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+ul.people_also_ask_list li.also_ask_header {
+    color: #545454;
+}
+
+.arrow-down-icon-container {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -16px;
+}
+
+.arrow-down-icon {
+    background: url("https://img.icons8.com/nolan/64/000000/sort-down.png") no-repeat;
+    background-size: 22px;
+    background-position: center;
+    height: 22px;
+    width: 22px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
 
 
 /* Footer */
 
-body > footer {margin-top: 30px;}
-
-body > footer div, body > footer ul {
-    background: #f2f2f2;
-    border-top: 1px solid #e4e4e4;
-    color: rgba(0, 0, 0, 0.54);
-    font-size: 15px;
-    line-height: 40px;
-    padding-left: 150px;
+footer {
+    margin-top: 30px;
+	background: #f2f2f2;
+}
+footer h4 {
+	color: rgba(0,0,0, 0.54);
+	font-size: 15px;
+	line-height: 39.5px;
+	font-weight: 400;
+	padding-left: 12px;
+	border: 1px solid transparent;
+    margin: 0;
+}
+footer a {
+	color: #5f6368;
+	display: inline-block;
+	padding: 12px 11.3px;
+	font-size: 14px;
+}
+footer a:hover {
+    color: #333;
+	text-decoration: underline;
 }
 
-body > footer li {
-    display: inline;
+/*//////////////////////////////////////////////////////////////////////////*/
+
+
+header.results_header_section {
+    border-bottom: solid 1px rgb(235, 235, 235);
+}
+.results_section_related_info .header_image_container {
+    height: 300px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.results_section_related_info .header-image {
+    width:100%;
+}
+
+.results_section_related_info .header_text_container {
+    padding: 15px 0px 15px 15px;
+}
+
+.results_section_related_info .header_text_container .minor-description{
+    color: #777;
     font-size: 13px;
-    margin-right: 25px;
+    font-family: 'Roboto',arial,sans-serif;
 }
 
-body > footer a {color: #777;}
+.results_section_related_info .related-info-header-text {
+    font-family: 'Roboto',arial,sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 12px 0px 8px 0px;
+}
 
-body > footer a:hover {color: #333;}
+.results_section_related_info .result-description-container {
+    padding: 15px;
+    border-bottom: solid 1px rgb(235, 235, 235);
+}
+
+.results_section_related_info .result-description-container .text-row, .results_section_related_info .related-info-footer .text-row{
+    margin-bottom: 10px;
+}
+
+.results_section_related_info .result-description-container p {
+    margin: 0px 0px 20px 0px;
+    line-height: 20.2px;
+    color: #222222;
+}
+
+.description-text-sm, .label-text-sm, .label-text-md, .btn-label-text-sm {
+    font-size: 13px;
+    font-family: 'Roboto', arial, sans-serif;
+    line-height: 20.2px;
+}
+
+.label-text-md {
+    font-size: 18px;
+    color: #222222;
+    line-height: 28px;
+}
+.btn-label-text-sm {
+    font-size: 11px;
+    font-weight: 700;
+    color: #444444;
+}
+
+.results_section_related_info .related-info-footer {
+    padding: 15px;
+}
+
+.results_section_related_info .related-info-footer .flight-info-container .flight-info-text {
+    font-size: 18x;
+    font-family: 'Roboto', arial, sans-serif;
+    line-height: 20.2px;
+    /* color: #222222; */
+    color: rgb(188, 19, 254, 0.6);
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.results_section_related_info .related-info-footer .review-section .review-col-left {
+    display: inline-block;
+}
+.results_section_related_info .related-info-footer .review-section .review-section-btn-container {
+    float: right;
+}
+
+.results_section_related_info .related-info-footer .review-section-btn {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.also-search-for-inline-block-fix {
+    font-size: 0px;
+}
+.results_section_related_info .related-info-footer .also-search-for-section {
+    position: relative;
+    text-align: center;
+}
+
+.results_section_related_info .related-info-footer .also-search-for-section h3 {
+    font-weight: normal;
+    margin-bottom: 5px;
+    text-align: initial;
+}
